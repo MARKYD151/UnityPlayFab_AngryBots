@@ -3,7 +3,7 @@
 5 easy steps to start using this demo :
 
  * Create a new project.
- * Download the Assets folder and copy the content in your own project Assets folder.
+ * Download the Assets folder and copy the content in your own project Assets folder (for example, the Assets/AngryBots from the Assets folder should be in Assets/AngryBots in your project - Assets/Assets/AngryBots will not be processed correctly).
  * Put the Playfab demo scenes in the Build settings from the folder PlayFabAngryBots/Scenes.
  * Press play.
  * Have fun modifying the scripts and prefabs.
