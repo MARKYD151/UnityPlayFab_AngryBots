@@ -136,9 +136,7 @@ namespace PlayFab.Examples{
 		
 		private void EventLogged(LogEventResult result)
 		{
-			foreach (string resultError in result.errors) {
-				Debug.Log ("Event error " + resultError);
-			}
+				Debug.Log ("Event error " + result);
 		}
 		
 		void OnPlayFabError(PlayFabError error)

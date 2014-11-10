@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 5ba8e698dc4648c4b842a7bcefcb06cc
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: HealthIconx
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

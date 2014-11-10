@@ -27,7 +27,6 @@ namespace PlayFab{
 		}
 		public static event LoggedInEventHandler LoggedIn;
 
-		public static bool AngryBotsModActivated { get; set; }
 		public static bool KeepSessionKey { get; set; }
 		public static bool SkipLogin { get; set; }
 
@@ -77,14 +76,12 @@ namespace PlayFab{
 			if (PlayFabSettings.TitleId == null)
 								PlayFabSettings.TitleId = TitleId;
 			CatalogVersion = data.CatalogVersion;
-			AngryBotsModActivated = data.AngryBotsModActivated;
 			KeepSessionKey = data.KeepSessionKey;
 			SkipLogin = data.SkipLogin;
-			Debug.Log ("AngryBotsModActivated " + AngryBotsModActivated);
-
 			if (KeepSessionKey && PlayFabClientAPI.AuthKey == null && data.AuthKey != null) {
 				PlayFabClientAPI.AuthKey = AuthKey = data.AuthKey;
 				Debug.Log ("Retrieved auth key: " + AuthKey);
+				Debug.Log ("SkipLogin: " + SkipLogin);
 			}
 			else if(KeepSessionKey && PlayFabClientAPI.AuthKey!=null &&  data.AuthKey==null)
 				SaveData();
@@ -104,7 +101,6 @@ namespace PlayFab{
 			PlayfabGameData data = new PlayfabGameData ();
 			data.TitleId = TitleId;
 			data.CatalogVersion = CatalogVersion;
-			data.AngryBotsModActivated = AngryBotsModActivated;
 			data.KeepSessionKey = KeepSessionKey;
 			data.SkipLogin = SkipLogin;
 			if (KeepSessionKey && PlayFabClientAPI.AuthKey != null)
@@ -122,7 +118,6 @@ public class PlayfabGameData
 {
 	public string TitleId;
 	public string CatalogVersion;
-	public bool AngryBotsModActivated;
 	public bool KeepSessionKey;
 	public bool SkipLogin;
 	public string AuthKey;

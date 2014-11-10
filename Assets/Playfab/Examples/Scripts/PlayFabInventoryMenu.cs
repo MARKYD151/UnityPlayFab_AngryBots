@@ -53,7 +53,7 @@ public class PlayFabInventoryMenu : PlayFabItemsController {
 
 					if (inc >0) // because item 1 has infinite ammo
 					{
-						uint? num = 0;
+						int? num = 0;
 						if(PlayFabGameBridge.consumableItems.ContainsKey(entry.Key)){
 							num = PlayFabGameBridge.consumableItems[entry.Key];
 						}

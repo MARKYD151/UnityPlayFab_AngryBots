@@ -90,7 +90,6 @@ namespace PlayFab.Examples{
 				if (GUI.Button(new Rect(winRect.x +18,yStart +235, 80, 20),"Log In"))
 				{
 					PlayFabGameBridge.gameState = 2;
-					if(!PlayFabData.AngryBotsModActivated)Application.LoadLevel (nextScene);
 				}
 
 				if (Input.mousePosition.x < winRect.x + winRect.width && Input.mousePosition.x > winRect.x && Screen.height - Input.mousePosition.y < winRect.y + winRect.height && Screen.height - Input.mousePosition.y > winRect.y){
@@ -124,7 +123,6 @@ namespace PlayFab.Examples{
 
 			Time.timeScale = 1.0f;	// unpause and start game...
 			PlayFabGameBridge.gameState = 3;
-			Application.LoadLevel (confirmScene);	// now reset the level -- force load of all the properties
 
 			//if(PlayFabData.AngryBotsModActivated)Application.LoadLevel ("Default");
 			//else Application.LoadLevel (confirmScene);
